@@ -1,6 +1,6 @@
 
 ##$q.all() demo for retrieving all github information
-
+https://egghead.io/lessons/multiple-http-requests-with-q 
 
 * creating a Github service to carry out multiple $http requests
 
