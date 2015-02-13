@@ -1,0 +1,96 @@
+body {
+    overflow: hidden;
+    background-color: #000000;
+    margin: 10px;
+}
+
+.slider {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background: #e6e6e6;
+    border: 20px solid #FFF;
+    margin-top: 20px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1 > span, h3 > span {
+    background-color: rgba(244, 249, 251, 0.80);
+    line-height: 2;
+    padding: 10px;
+}
+
+.slide > h1 {
+    width: 400px;
+    top: 100px;
+}
+
+.slide > h3 {
+    width: 400px;
+    top: 180px;
+}
+
+.slide > h1, .slide > img, .slide > h3 {
+    position: absolute;
+}
+
+.nonDraggableImage {
+    -webkit-user-drag: none;
+}
+
+.avatar {
+    top: 80px;
+    left: 300px;
+}
+
+/*---------------------------------------------------------
+NAV
+---------------------------------------------------------*/
+.nav {
+    width: 800px;
+    display: table;
+    table-layout: fixed;
+    padding: 0px;
+}
+
+.nav div {
+    display:table-cell;
+    background-color: #FFFFFF;
+    height: 48px;
+    width: 33%;
+    background-color: #D3D3D3;
+    cursor: pointer;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    border-top:1px solid #000000;
+    border-right:1px solid #000000;
+}
+
+.nav div:first-child {
+    width: 34%;
+}
+
+.nav div:last-child {
+    border-right:1px solid #D3D3D3;
+}
+
+.nav .active div:last-child {
+    border-right:1px solid #FFFFFF;
+}
+
+.nav h3 {
+    width: 100%;
+    text-align: center;
+}
+
+.nav .active {
+    border-top:1px solid #FFFFFF;
+    background-color: #FFFFFF;
+}

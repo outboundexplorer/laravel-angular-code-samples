@@ -1,0 +1,28 @@
+<h1>{{bookmarksListScope.getCurrentCategoryName() }}</h1>
+<div ng-repeat="bookmark in bookmarksListVm.bookmarks |
+        filter:{category:bookmarksListVm.getCurrentCategoryName()}">
+    <button type="button" ng-click="bookmarksListVm.deleteBookmark(bookmark)" class="close">&times;</button>
+
+    <!-- the button will allow two functions to be called when actioned.
+    Firstly, we will call the setEditedBookmark(bookmark)function which will assign the current
+    bookmark to the $scope.editedBookma rk.
+    Secondly, the startEditing() function will be called to set the state to show the editor form.
+    -->
+    <button type="button" class="btn btn-link" ui-sref="eggly.categories.bookmarks.edit({bookmarkId:bookmark.id})">
+        <span class="glyphicon glyphicon-pencil"></span>
+    </button>
+    <a href="{{bookmark.url}}" target="_blank">{{bookmark.title}}</a>
+</div>
+<hr/>
+
+<!-- CREATING -->
+<!-- we use the ng-if="showCreator()" statement to add or remove this div from the DOM
+     We have set this up so that once we are inside a category, it will automatically show the
+     'Create a Boomark' button.
+     We can then use a second ng-if to actually enter the Create a Bookmark form -->
+<ui-view ng-if="bookmarksListVm.getCurrentCategory()">
+    <button type="button" class="btn btn-link" ui-sref="eggly.categories.bookmarks.create">
+        <span class="glyphicon glyphicon-plus"></span>
+        Create a Bookmark
+    </button>
+</ui-view>

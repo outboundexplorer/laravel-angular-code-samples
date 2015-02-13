@@ -1,0 +1,9 @@
+1) Implement a real server (including database, login and JWT authentication)
+2) Remove dependency jQUERY by implementing ui-bootstrap
+3) Modify menu structure to make sure that all main features are flat. i.e. categories and bookmarks
+4) Devise a file naming and module naming system
+5) Work out how to show active state for categories and bookmarks
+6) Refactor removing anonymous functions from controller callbacks
+7) Wrap all javascript in IIFE function (function(){ my-code })()
+8) As we are using promises, need to implement a way of dealing with promises if they have failed (refer to egghead notes)
+9) Server Side, create proper files and classes, don't just do everything within routes.php

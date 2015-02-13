@@ -1,0 +1,19 @@
+<h4>Editing {{editBookmarkScope.bookmark.title}}</h4>
+<form class="edit-form" role="form" ng-submit="editBookmarkVm.updateBookmark(editBookmarkVm.editedBookmark)" novalidate>
+    <div class="form-group">
+        <label for="editedBookmarkTitle">Bookmark Title</label>
+        <input type="text" class="form-control" id="editedBookmarkTitle"
+               ng-model="editBookmarkVm.editedBookmark.title" placeholder="Enter title"/>
+    </div>
+    <div class="form-group">
+        <label for="editedBookmarkURL">Bookmark URL</label>
+        <input type="text" class="form-control" id="editedBookmarkURL"
+               ng-model="editBookmarkVm.editedBookmark.url" placeholder="Enter url"/>
+    </div>
+    <button type="submit" class="btn btn-info btn-lg">
+        Save
+    </button>
+    <button type="button" class="btn btn-default btn-lg pull-right" ng-click="cancelEditing()">
+        Cancel
+    </button>
+</form>

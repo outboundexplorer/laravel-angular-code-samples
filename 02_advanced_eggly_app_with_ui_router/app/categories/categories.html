@@ -1,0 +1,16 @@
+<a ui-sref="eggly.categories"><img class="logo"
+     src="/angularjs/02_advanced_eggly_app_with_ui_router/assets/image/eggly-logo.png"></a>
+<ul class="nav nav-sidebar">
+    <!--
+    We can use ng-class="{'active':isCurrentCategory(category)}" in order to indicate which
+    menu item we are current looking at
+    -->
+    <li ng-repeat="category in categoriesListVm.categories">
+        <!-- When use ui-sref, we are able to pass the object map to the state that we have specified-->
+        <a ui-sref="eggly.categories.bookmarks({category:category.name})">
+            {{category.name}}
+        </a>
+    </li>
+</ul>
+
+

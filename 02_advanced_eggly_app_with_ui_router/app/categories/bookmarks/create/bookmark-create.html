@@ -1,0 +1,16 @@
+<form class="create-form" role="form" ng-submit="createBookmarkVm.createBookmark(createBookmarkVm.newBookmark)">
+    <div class="form-group">
+        <label for="newBookmarkTitle">Bookmark Title</label>
+        <input type="text" class="form-control" id="newBookmarkTitle" ng-model="createBookmarkVm.newBookmark.title"/>
+    </div>
+    <div class="form-group">
+        <label for="newBookmarkURL">Bookmark URL</label>
+        <input type="text" class="form-control" id="newBookmarkURL" ng-model="createBookmarkVm.newBookmark.url"/>
+    </div>
+    <button type="submit" class="btn btn-info btn-lg">
+        Create
+    </button>
+    <button type="button" class="btn btn-default btn-lg pull-right" ng-click="createBookmarkVm.cancelCreating()">
+        Cancel
+    </button>
+</form>
